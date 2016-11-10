@@ -20,4 +20,3 @@ before_build:
 build_script:
     - cd tests_catch/
     - cmake -G "NMake Makefiles" && nmake
-    - nmake install
