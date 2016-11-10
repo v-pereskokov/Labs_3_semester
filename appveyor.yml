@@ -1,0 +1,12 @@
+platform:
+    - x86
+    - x64
+
+environment:
+    matrix:
+        - VSVER: 14
+
+build_script:
+    - cd tests_catch/
+    - cmake && nmake
+    - nmake install
