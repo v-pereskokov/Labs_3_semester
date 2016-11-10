@@ -8,5 +8,5 @@ environment:
 
 build_script:
     - cd tests_catch/
-    - cmake && nmake
+    - cmake -G "NMake Makefiles" && nmake
     - nmake install
