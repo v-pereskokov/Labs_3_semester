@@ -15,6 +15,7 @@ before_build:
             $env:VCVARS_PLATFORM="amd64"
             $env:TARGET="VC-WIN64A"
         }
+    - ps: $env:VSCOMNTOOLS=(Get-Content ("env:VS" + "$env:VSVER" + "0COMNTOOLS"))
     - call "%VSCOMNTOOLS%\..\..\VC\vcvarsall.bat" %VCVARS_PLATFORM%
 
 build_script:
