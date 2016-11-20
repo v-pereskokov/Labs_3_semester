@@ -1,0 +1,12 @@
+language: cpp
+matrix:
+  include:
+    - os: osx
+      compiler: g++-5
+      env: COMPILER=g++ -std=c++11
+
+script:
+  - cd tests_catch
+  - mkdir build && cd build
+  - cmake .. && make
+  - ./Tests
